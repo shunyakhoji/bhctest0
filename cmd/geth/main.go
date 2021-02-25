@@ -210,7 +210,7 @@ func init() {
 	// Initialize the CLI app and start Geth
 	app.Action = geth
 	app.HideVersion = true // we have a command to print the version
-	app.Copyright = "Copyright 2013-2021 The go-ethereum Authors"
+	app.Copyright = "Copyleft"
 	app.Commands = []cli.Command{
 		// See chaincmd.go:
 		initCommand,
@@ -273,25 +273,44 @@ func main() {
 // prepare manipulates memory cache allowance and setups metric system.
 // This function should be called before launching devp2p stack.
 func prepare(ctx *cli.Context) {
+	
+	log.Info("	                        Starting				 \n")
+	log.Info("	 ________  ___  ___  ________  ________  ________  _________     \n")  
+	log.Info("	|\   __  \|\  \|\  \|\   __  \|\   __  \|\   __  \|\___   ___\   \n")
+	log.Info("	\ \  \|\ /\ \  \\\  \ \  \|\  \ \  \|\  \ \  \|\  \|___ \  \_|   \n") 
+	log.Info("	 \ \   __  \ \   __  \ \   __  \ \   _  _\ \   __  \   \ \  \    \n")  
+	log.Info("	  \ \  \|\  \ \  \ \  \ \  \ \  \ \  \\  \\ \  \ \  \   \ \  \   \n")  
+	log.Info("	   \ \_______\ \__\ \__\ \__\ \__\ \__\\ _\\ \__\ \__\   \ \__\  \n")  
+	log.Info("	    \|_______|\|__|\|__|\|__|\|__|\|__|\|__|\|__|\|__|    \|__|  \n\n\n")  
+
+
+
+	log.Info("		   ________  ___  ___  ________  ___  ________  	\n")           
+	log.Info("		  |\   ____\|\  \|\  \|\   __  \|\  \|\   ___  \        \n")   
+	log.Info("		  \ \  \___|\ \  \\\  \ \  \|\  \ \  \ \  \\ \  \       \n")   
+	log.Info("		   \ \  \    \ \   __  \ \   __  \ \  \ \  \\ \  \      \n")   
+	log.Info("		    \ \  \____\ \  \ \  \ \  \ \  \ \  \ \  \\ \  \     \n")   
+	log.Info("		     \ \_______\ \__\ \__\ \__\ \__\ \__\ \__\\ \__\    \n")   
+	log.Info("		      \|_______|\|__|\|__|\|__|\|__|\|__|\|__| \|__|    \n\n\n\n") 
 	// If we're running a known preset, log it for convenience.
 	switch {
 	case ctx.GlobalIsSet(utils.RopstenFlag.Name):
-		log.Info("Starting Geth on Ropsten testnet...")
+		log.Info("Starting Manthan on Ropsten testnet...")
 
 	case ctx.GlobalIsSet(utils.RinkebyFlag.Name):
-		log.Info("Starting Geth on Rinkeby testnet...")
+		log.Info("Starting Manthan on Rinkeby testnet...")
 
 	case ctx.GlobalIsSet(utils.GoerliFlag.Name):
-		log.Info("Starting Geth on Görli testnet...")
+		log.Info("Starting Manthan on Görli testnet...")
 
 	case ctx.GlobalIsSet(utils.YoloV3Flag.Name):
-		log.Info("Starting Geth on YOLOv3 testnet...")
+		log.Info("Starting Manthan on YOLOv3 testnet...")
 
 	case ctx.GlobalIsSet(utils.DeveloperFlag.Name):
-		log.Info("Starting Geth in ephemeral dev mode...")
+		log.Info("Starting Manthan in ephemeral dev mode...")
 
 	case !ctx.GlobalIsSet(utils.NetworkIdFlag.Name):
-		log.Info("Starting Geth on Ethereum mainnet...")
+		log.Info("Starting Manthan on BharatChain mainnet...")
 	}
 	// If we're a full node on mainnet without --cache specified, bump default cache allowance
 	if ctx.GlobalString(utils.SyncModeFlag.Name) != "light" && !ctx.GlobalIsSet(utils.CacheFlag.Name) && !ctx.GlobalIsSet(utils.NetworkIdFlag.Name) {
