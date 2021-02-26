@@ -52,7 +52,7 @@ var RinkebyBootnodes = []string{
 // GoerliBootnodes are the enode URLs of the P2P bootstrap nodes running on the
 // Görli test network.
 var GoerliBootnodes = []string{
-	"enode://984363999840e6a81f6d54fbe74854b34582d3ef075dd901046e5f1048f81fb51019e44051bfa5e92dbd2ac651d5fad488a404ddeda0067dc9a4566ab9b67260@68.183.81.227:30305"
+	"enode://984363999840e6a81f6d54fbe74854b34582d3ef075dd901046e5f1048f81fb51019e44051bfa5e92dbd2ac651d5fad488a404ddeda0067dc9a4566ab9b67260@68.183.81.227:30305",
 }
 
 // YoloV3Bootnodes are the enode URLs of the P2P bootstrap nodes running on the
