@@ -45,17 +45,17 @@ func makeWizard(network string) *wizard {
 // run displays some useful infos to the user, starting on the journey of
 // setting up a new or managing an existing Ethereum private network.
 func (w *wizard) run() {
-	fmt.Println("+-----------------------------------------------------------+")
-	fmt.Println("| Welcome to puppeth, your Ethereum private network manager |")
-	fmt.Println("|                                                           |")
-	fmt.Println("| This tool lets you create a new Ethereum network down to  |")
-	fmt.Println("| the genesis block, bootnodes, miners and ethstats servers |")
-	fmt.Println("| without the hassle that it would normally entail.         |")
-	fmt.Println("|                                                           |")
-	fmt.Println("| Puppeth uses SSH to dial in to remote servers, and builds |")
-	fmt.Println("| its network components out of Docker containers using the |")
-	fmt.Println("| docker-compose toolset.                                   |")
-	fmt.Println("+-----------------------------------------------------------+")
+	fmt.Println("+-------------------------------------------------------------------+")
+	fmt.Println("| Welcome to Vishwakarma, your BharatChain private network designer |")
+	fmt.Println("|                                                                   |")
+	fmt.Println("| This tool lets you create a new BharatChain network down to       |")
+	fmt.Println("| the genesis block, bootnodes, miners and stats servers            |")
+	fmt.Println("| without the hassle that it would normally entail.                 |")
+	fmt.Println("|                                                                   |")
+	fmt.Println("| Vishwakarma uses SSH to dial in to remote servers, and builds     |")
+	fmt.Println("| its network components out of Docker containers using the         |")
+	fmt.Println("| docker-compose toolset.                                           |")
+	fmt.Println("+-------------------------------------------------------------------+")
 	fmt.Println()
 
 	// Make sure we have a good network name to work with	fmt.Println()
@@ -71,7 +71,7 @@ func (w *wizard) run() {
 			log.Error("I also like to live dangerously, still no spaces, hyphens or capital letters")
 		}
 	}
-	log.Info("Administering Ethereum network", "name", w.network)
+	log.Info("Administering BharatChain network", "name", w.network)
 
 	// Load initial configurations and connect to all live servers
 	w.conf.path = filepath.Join(os.Getenv("HOME"), ".puppeth", w.network)
